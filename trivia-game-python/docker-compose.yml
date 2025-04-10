@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:17-alpine3.21
+    container_name: trivia-game-db
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-trivia_game}
+      POSTGRES_USER: ${POSTGRES_USER:-user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password}
+    ports:
+      - "5432:5432"
+    volumes:
+      - trivia_game_data:/var/lib/postgresql/data
+    restart: always
+    networks:
+      - trivia_game_network
+
+  web:
+    build: .
+    container_name: trivia-game-web
+    command: uvicorn main:app --host 0.0.0.0 --port 8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    networks:
+      - trivia_game_network
+
+networks:
+  trivia_game_network:
+    driver: bridge
+
+volumes:
+  trivia_game_data:
