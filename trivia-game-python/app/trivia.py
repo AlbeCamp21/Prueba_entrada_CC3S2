@@ -39,7 +39,7 @@ def run_quiz():
 	quiz.add_question(Question("1+1",["A) 0","B) 1","C) 2","D) 3"],"C"))
 	quiz.add_question(Question("1+2",["A) 0","B) 1","C) 2","D) 3"],"D"))
 	print("¡Bienvenido al juego de trivia!")
-	while True:
+	while quiz.current_question_index < 10:
 		pregunta = quiz.get_next_question()
 		if pregunta is None:
 			break
