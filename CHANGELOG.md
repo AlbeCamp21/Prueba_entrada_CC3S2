@@ -38,4 +38,14 @@
 
 3. **Commit 0820fb6** (Rama develop)  
    - Merge realizado entre `feature/estructura-basic` y `develop`.
+   
+## Día 4
+1. **Commit c6182ad** (Rama feature/dia4)  
+   - Actualizada la clase `Quiz`, donde se le añade más funciones para el control de respuestas correctas e incorrectas.
+
+2. **Commit f306aef** (Rama feature/dia4)  
+   - Actualizado el archivo `test_trivia.py`, donde se le añade tests para probar el control de respuestas correctas e incorrectas.
+
+3. **Commit aaaf78e** (Rama develop)  
+   - Merge realizado entre `feature/dia4` y `develop`.
 
