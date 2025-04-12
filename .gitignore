@@ -1,0 +1,7 @@
+# Ignorar archivos compilados de Python dentro de app/
+./trivia-game-python/app/__pycache__/
+./trivia-game-python/app/*.pyc
+
+# Ignorar entorno virtual
+./trivia-game-python/venv/
+
