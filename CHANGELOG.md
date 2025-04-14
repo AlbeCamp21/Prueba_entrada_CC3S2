@@ -48,4 +48,20 @@
 
 3. **Commit aaaf78e** (Rama develop)  
    - Merge realizado entre `feature/dia4` y `develop`.
+   
+## Día 5
+1. **Commit bb99682** (Rama feature/ui-improvements)  
+   - Actualizada la función `run_quiz`, donde se le añade las 10 preguntas y se mejora relativamente la interfaz.
+
+2. **Commit be0e9fa** (Rama feature/ui-improvements)  
+   - Haciendo pruebas, se actualiza el archivo `Dockerfile` para levantar el container sin errores.
+
+3. **Commit e263c93** (Rama feature/ui-improvements)  
+   - Haciendo pruebas, se actualiza el archivo `docker-compose.yml` para levantar el container sin errores.
+
+4. **Commit 4ac2628** (Rama feature/ui-improvements)  
+   - Se mejora aún más la interfaz de usuario de `trivia.py`.
+   
+5. **Commit 279f423** (Rama develop)  
+   - Merge realizado entre `feature/ui-improvements` y `develop`.
 
