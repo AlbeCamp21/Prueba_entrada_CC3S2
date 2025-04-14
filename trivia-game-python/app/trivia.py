@@ -34,18 +34,52 @@ class Quiz:
 			return False
 
 def run_quiz():
+	print(r"""
+ _____    _       _         _____                      
+|_   _|  (_)     (_)       |  __ \                     
+  | |_ __ ___   ___  __ _  | |  \/ __ _ _ __ ___   ___ 
+  | | '__| \ \ / / |/ _` | | | __ / _` | '_ ` _ \ / _ \
+  | | |  | |\ V /| | (_| | | |_\ \ (_| | | | | | |  __/
+  \_/_|  |_| \_/ |_|\__,_|  \____/\__,_|_| |_| |_|\___|
+
+         __  
+ ___  ___\ \ 
+(___)(___)> >  Responde las siguientes preguntas seleccionando el número de la opción correcta!!!
+         /_/ 
+
+
+                                                  
+""")
 	quiz = Quiz()
 	# preguntas de ejemplo
-	quiz.add_question(Question("1+1",["A) 0","B) 1","C) 2","D) 3"],"C"))
-	quiz.add_question(Question("1+2",["A) 0","B) 1","C) 2","D) 3"],"D"))
-	print("¡Bienvenido al juego de trivia!")
+	quiz.add_question(Question("¿Cuál es la capital de Francia?", ["Madrid", "Berlín", "París", "Roma"], "3"))
+	quiz.add_question(Question("¿Quién escribió 'Cien años de soledad'?", ["Pablo Neruda", "Gabriel García Márquez", "Julio Cortázar", "Mario Vargas Llosa"], "2"))
+	quiz.add_question(Question("¿En qué continente se encuentra Egipto?", ["Asia", "Europa", "África", "América"], "3"))
+	quiz.add_question(Question("¿Cuál es el elemento químico con el símbolo 'O'?", ["Oro", "Oxígeno", "Osmio", "Oxalato"], "2"))
+	quiz.add_question(Question("¿Qué planeta es conocido como el planeta rojo?", ["Marte", "Júpiter", "Saturno", "Venus"], "1"))
+	quiz.add_question(Question("¿En qué año llegó el hombre a la Luna?", ["1965", "1969", "1971", "1975"], "2"))
+	quiz.add_question(Question("¿Cuál es el océano más grande del mundo?", ["Atlántico", "Índico", "Ártico", "Pacífico"], "4"))
+	quiz.add_question(Question("¿Quién pintó la Mona Lisa?", ["Leonardo da Vinci", "Miguel Ángel", "Van Gogh", "Picasso"], "1"))
+	quiz.add_question(Question("¿Qué instrumento mide la intensidad de los terremotos?", ["Termómetro", "Sismógrafo", "Barómetro", "Anemómetro"], "2"))
+	quiz.add_question(Question("¿Cuál es el idioma más hablado en el mundo?", ["Inglés", "Hindi", "Español", "Chino mandarín"], "4"))
+
 	while quiz.current_question_index < 10:
-		pregunta = quiz.get_next_question()
-		if pregunta is None:
+		question = quiz.get_next_question()
+		if question:
+			print(f"\nPregunta {quiz.current_question_index}: {question.description}")
+			for idx, option in enumerate(question.options):
+				print(f"{idx + 1}) {option}")
+			answer = input("Tu respuesta: ")
+			if quiz.answer_question(question, answer):
+				print("¡Correcto! ✅")
+			else:
+				print("Incorrecto ❌")
+		else:
 			break
-		print("\n",pregunta.description)
-		for opcion in pregunta.options:
-			print(opcion)
+	print("\nJuego terminado!!!")
+	print(f"\nPreguntas contestadas: {quiz.current_question_index}")
+	print(f"Respuestas correctas: {quiz.correct_answers}")
+	print(f"Respuestas incorrectas: {quiz.incorrect_answers}")
 
 
 if __name__ == "__main__":
