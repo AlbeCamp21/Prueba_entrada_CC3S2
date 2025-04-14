@@ -34,10 +34,22 @@ class Quiz:
 			return False
 
 def run_quiz():
-	print("-------------------------------------")
-	print("*** Bienvenido al juego de Trivia ***")
-	print("-------------------------------------")
-	print("Responde las siguientes preguntas seleccionando el número de la opción correcta.")
+	print(r"""
+ _____    _       _         _____                      
+|_   _|  (_)     (_)       |  __ \                     
+  | |_ __ ___   ___  __ _  | |  \/ __ _ _ __ ___   ___ 
+  | | '__| \ \ / / |/ _` | | | __ / _` | '_ ` _ \ / _ \
+  | | |  | |\ V /| | (_| | | |_\ \ (_| | | | | | |  __/
+  \_/_|  |_| \_/ |_|\__,_|  \____/\__,_|_| |_| |_|\___|
+
+         __  
+ ___  ___\ \ 
+(___)(___)> >  Responde las siguientes preguntas seleccionando el número de la opción correcta!!!
+         /_/ 
+
+
+                                                  
+""")
 	quiz = Quiz()
 	# preguntas de ejemplo
 	quiz.add_question(Question("¿Cuál es la capital de Francia?", ["Madrid", "Berlín", "París", "Roma"], "3"))
@@ -59,9 +71,9 @@ def run_quiz():
 				print(f"{idx + 1}) {option}")
 			answer = input("Tu respuesta: ")
 			if quiz.answer_question(question, answer):
-				print("¡Correcto!")
+				print("¡Correcto! ✅")
 			else:
-				print("Incorrecto X.")
+				print("Incorrecto ❌")
 		else:
 			break
 	print("\nJuego terminado!!!")
