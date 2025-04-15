@@ -5,3 +5,6 @@ trivia-game-python/app/*.pyc
 # Ignorar entorno virtual
 trivia-game-python/venv/
 
+# archivos compilados de pyhton
+*.pyc
+__pycache__/
