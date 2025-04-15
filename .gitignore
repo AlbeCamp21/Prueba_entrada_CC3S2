@@ -8,3 +8,5 @@ trivia-game-python/venv/
 # archivos compilados de pyhton
 *.pyc
 __pycache__/
+
+.env
