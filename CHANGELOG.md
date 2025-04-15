@@ -89,4 +89,44 @@
    
 8. **Commit dc009cf** (Rama develop)  
    - Merge realizado entre `feature/ci-cd-integration` y `develop`.
+   
+## Día 7
+1. **Commit e1e6f2e** (Rama feature/dia7)  
+   - Archivos adicionales (como `__pycache__`) agregado a `.gitignore`.
+
+2. **Commit 083ca99** (Rama feature/dia7)  
+   - Añadido bandit a `ci.yml`.
+
+3. **Commit 1069ce8** (Rama feature/dia7)  
+   - Mejoramiento en `test_api`, donde se mejora las direcciones de los directorios que usa.
+
+4. **Commit d2036e6** (Rama feature/dia7)  
+   - Agregado elementos (como bandit) a `requirements.txt`.
+   
+5. **Commit 0cd8656** (Rama feature/dia7)  
+   - `ci.yml` mejorado, se quita la redundancia que instalaba requerimientos ya añadidos a `requirements.txt`.
+
+6. **Commit 596737f** (Rama feature/dia7)  
+   - Se agrega `.env` a `.gitignore`.
+
+7. **Commit cb62a84** (Rama feature/dia7)  
+   - Se añaden más elementos a `requirements.txt`, como también modificaciones a versiones por incopatibilidad.
+   
+8. **Commit 7b0ecfb** (Rama feature/dia7)  
+   - Se crea el archivo `locusfile`.
+   
+9. **Commit a43523f** (Rama feature/dia7)  
+   - Se conecta `trivia.py` a la base de datos, haciendo que las preguntas salgan de la base de datos.
+
+10. **Commit ba4da9a** (Rama feature/dia7)  
+   - Se crea `config.py`, para realizar la conexión de la base de datos con las credenciales en `.env` .
+
+11. **Commit 48da810** (Rama feature/dia7)  
+   - `db.py` creado, para sacar información de la base de datos.
+   
+12. **Commit 03de2e3** (Rama develop)  
+   - Merge realizado entre `feature/dia7` y `develop`.
+   
+13. **Commit a6f00e4** (Rama develop)  
+   - Actualizado `config.py`, quitando prints que se pusieron para verificar las conexiones.
 
