@@ -1,16 +1,13 @@
-from fastapi.testclient import TestClient
-import importlib.util
 import sys
 from pathlib import Path
 
-main_path = Path(__file__).resolve().parents[2] / "trivia-game-python" / "app" / "main.py"
+# Agregar trivia-game-python al path
+sys.path.append(str(Path(__file__).resolve().parents[2] / "trivia-game-python"))
 
-spec = importlib.util.spec_from_file_location("main", str(main_path))
-main = importlib.util.module_from_spec(spec)
-sys.modules["main"] = main
-spec.loader.exec_module(main)
+from app.main import app
+from fastapi.testclient import TestClient
 
-client = TestClient(main.app)
+client = TestClient(app)
 
 def test_create_question():
 	response = client.post("/questions/", json={
