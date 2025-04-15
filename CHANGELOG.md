@@ -64,4 +64,29 @@
    
 5. **Commit 279f423** (Rama develop)  
    - Merge realizado entre `feature/ui-improvements` y `develop`.
+   
+## Día 6
+1. **Commit a944c96** (Rama feature/ci-cd-integration)  
+   - Actualizado el archivo `docker-compose.yml`, para que cree la base de datos señalado en el archivo `init.sql`.
+
+2. **Commit 6b201d5** (Rama feature/ci-cd-integration)  
+   - Creación del archivo `init.sql` donde se crean la tabla que contendrá las preguntas clasificadas por dificultad.
+
+3. **Commit 779812c** (Rama feature/ci-cd-integration)  
+   - Directorio `.github` creado donde se encuentra `ci.yml` para la implementación de pruebas.
+
+4. **Commit 3c57f25** (Rama feature/ci-cd-integration)  
+   - Se crea el archivo `.secrets`, donde se encuentra el `SONAR_TOKEN`.
+   
+5. **Commit fd50eb1** (Rama feature/ci-cd-integration)  
+   - Se crea el directorio `test_api`, donde se encuentra el archivo `test_api.py` para pruebas con fastapi.
+
+6. **Commit a39bf16** (Rama feature/ci-cd-integration)  
+   - Directorio `routes` creado como convención de fastapi para mejorar la organización del código .
+
+7. **Commit d5d669d** (Rama feature/ci-cd-integration)  
+   - `main.py` actualizado para que trabaje con el directorio `routes`.
+   
+8. **Commit dc009cf** (Rama develop)  
+   - Merge realizado entre `feature/ci-cd-integration` y `develop`.
 
