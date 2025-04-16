@@ -20,6 +20,9 @@ class Quiz:
 		self.difficulty = 0
 		self.correct_streak = 0
 		self.incorrect_streak = 0
+		
+	def add_question(self, question):
+		self.questions.append(question)
 	
 	async def load_questions(self):
 		self.questions = await self._fetch_questions()
