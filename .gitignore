@@ -10,3 +10,5 @@ trivia-game-python/venv/
 __pycache__/
 
 .env
+
+.secrets
