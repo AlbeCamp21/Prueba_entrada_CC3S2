@@ -16,12 +16,12 @@
 `sudo docker-compose up --build`
 
 ### Paso 5:
-- DIrigirse a la raiz del repositorio
-`cd ..`
+- En otra ventana, en la misma ubicación, dirigirse a app/
+`cd app/`
 
 ### Paso 6:
 - Ejecutar la trivia
-`python trivia-game-python/app/trivia.py`
+`python3 trivia.py`
 
 ### Paso 7:
 - DIvertirse
