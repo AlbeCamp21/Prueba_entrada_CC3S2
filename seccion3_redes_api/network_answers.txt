@@ -1,0 +1,11 @@
+El término HTTP (HyperText Transfer Protocol) es un protocolo fundamental para la comunicación
+en la web. Nos permite el intercambio de información entre clientes (como navegadores por ejemplo)
+y servidores, usando un modelo de solicitud-respuesta. El protocolo HTTP define la forma en cómo
+se envían y reciben los mensajes, además de cómo se estructuran los datos transmitidos. El
+puerto número 80 es el predefinido para HTTP, en cambio, el puerto 443 se utiliza para el
+protocolo HTTPS, que es un HTTP con TLS/SSL, lo que nos brinda cifrado y autenticación. Ahora,
+usar el puerto 443 y TLS es importante si se quiere proteger la privacidad y la integridad de los
+datos que se transmiten, evitando que terceros intercepten la información. El TLS (Transport
+Layer Security) es un protocolo de seguridad que cifra la comunicación y verifica la identidad
+del servidor, haciendo que el intercambio de datos sea seguro. Si no se aplica TLS, los datos
+pueden ser vulnerables a ataques como el robo de información.
