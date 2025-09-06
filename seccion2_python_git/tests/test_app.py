@@ -6,15 +6,15 @@ def sample():
     return ["1", "2", "3"]
 
 def test_ok(sample):
-    # Arrange–Act–Assert
-    # Act
-    with pytest.raises(NotImplementedError):
-        summarize(sample)
+    result = summarize(sample)
+    assert result["count"] == 3
+    assert result["sum"] == 6.0
+    assert result["avg"] == 2.0
 
 def test_empty():
-    with pytest.raises(Exception):
+    with pytest.raises(ValueError):
         summarize([])
 
 def test_non_numeric():
-    with pytest.raises(Exception):
+    with pytest.raises(ValueError):
         summarize(["a", "2"])
