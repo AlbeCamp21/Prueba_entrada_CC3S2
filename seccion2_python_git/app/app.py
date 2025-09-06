@@ -4,13 +4,25 @@
 # - Valida que nums sea lista no vacía y elementos numéricos (acepta strings convertibles a float).
 # - CLI: python -m app "1,2,3" imprime: sum=6.0 avg=2.0 count=3
 
-def summarize(nums):  # TODO: tipado opcional
-    raise NotImplementedError("Implementa summarize según el enunciado")
+def summarize(nums):
+    if not isinstance(nums, list) or not nums:
+        raise ValueError(f"\n[!] La lista no puede ser vacía y debe ser tipo list")
+    try:
+        lista_floats = [float(x) for x in nums]
+    except Exception:
+        raise ValueError(f"\n[!]Todos los elementos deben ser numéricos")
+    count = len(lista_floats)
+    total = sum(lista_floats)
+    promedio = total / count
+    return {"count": count, "sum": total, "avg": promedio}
 
 
 if __name__ == "__main__":
     import sys
-    raw = sys.argv[1] if len(sys.argv) > 1 else ""
-    items = [p.strip() for p in raw.split(",") if p.strip()]
-    # TODO: validar items y llamar summarize, luego imprimir el formato solicitado
-    print("TODO: implementar CLI (python -m app \"1,2,3\")")
+    if len(sys.argv) > 1:
+        argumento = sys.argv[1]
+    else:
+        ""
+    numeros = [arg.strip() for arg in argumento.split(",") if arg.strip()]
+    resultado = summarize(numeros)
+    print(f"\n[+] sum={resultado['sum']} avg={resultado['avg']} count={resultado['count']}")
