@@ -1,3 +1,13 @@
+RESPUESTA 3.1.
+Usando el comando "dig google.com * +noall +answer > dig_output.txt".
+Dentro de lo que se devuelve, uno de las partes más importantes es el TTL, que nos muestra, en
+segundos, cuánto tiempo puede estar un registro almacenado en caché antes de que sea
+necesario volver a consultar al servidor. Por ejemplo, en la línea como:
+                google.com. 134 IN A 64.233.190.113
+el número "134" representa los segundo adicionales donde la dirección IP obtenida para
+google.com será válida, luego de este tiempo caducará y deberá hacer otra soliciutd nuevamente.
+
+RESPUESTA 3.3.
 El término HTTP (HyperText Transfer Protocol) es un protocolo fundamental para la comunicación
 en la web. Nos permite el intercambio de información entre clientes (como navegadores por ejemplo)
 y servidores, usando un modelo de solicitud-respuesta. El protocolo HTTP define la forma en cómo
