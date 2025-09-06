@@ -1,1 +1,9 @@
-# Genera este archivo con: git log --oneline --graph --decorate --all
+* 61093d5 (HEAD -> feature/msg) añadir comparación de FF, rebase y cherry pick
+* 44cb749 (origin/main, origin/HEAD, main) agregar output de covertura
+* 0ed065f añadir tests para app.py en test_app.py
+* 83421a9 actualizar gitignore
+* 418a8f0 agregar implementación de summarize en app.py
+* bdc713a añadir gitignore
+* bc1992c agregar explicación en archivos .txt en reports/
+* 0c32fb4 agregar estructura inicial del proyecto
+* 3219378 Initial commit
