@@ -1,0 +1,13 @@
+El flujo mínimo que se necesita para llevar código a producción de manera segura y eficiente
+consta de tres etapas principales: desarrollo, pruebas y despliegue. En la etapa de "desarrollo",
+los programadores tratan de escribir el código fuente y esto es gestionado con sistemas de
+control de versiones (git, por ejemplo), permitiendo así la colaboración y manteniendo un
+historial de cambios. La segunda etapa son las "pruebas", acá es donde se verifica que el código
+funcione correctamente y que cumpla con los requisitos establecidos. Para esto, se utilizan
+herramientas como pytest (ejecución de tests) y coverage (medir la cobertura), asegurando así
+que los errores se detecten antes de pasar a producción. Por último, en la etapa de despliegue,
+el código previamente probado se publica en el entorno de producción. Herramientas como docker
+nos permiten "empaquetar" la aplicación y sus dependencias, facilitando la portabilidad y
+despliegue. Si a esto le sumamos sistemas CI/CD (como GitHub Actions), entonces se podría
+automatizar todo el proceso, desde la integración de cambios hasta el despliegue final,
+reduciendo los errores y mejorar la velodad en la entrega de nuevas versiones.
